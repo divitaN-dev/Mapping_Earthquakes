@@ -92,7 +92,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
       let div = L.DomUtil.create("div", "info legend");
       const magnitudes = [0, 1, 2, 3, 4, 5];
       const colors = [
-        "#98ee00",
+        "#98ee00;",
         "#d4ee00",
         "#eecc00",
         "#ee9c00",
@@ -103,7 +103,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
    for (var i = 0; i < magnitudes.length; i++) {
     console.log(colors[i]);
     div.innerHTML +=
-      "<i style='background: " + colors[i] + "'></i> " +
+      "<i style= background:" + colors[i] + "></i>" +
       magnitudes[i] + (magnitudes[i + 1] ? "&ndash;" + magnitudes[i + 1] + "<br>" : "+");
     }
     return div;
